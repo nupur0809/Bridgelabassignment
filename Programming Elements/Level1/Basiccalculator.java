@@ -1,35 +1,27 @@
 import java.util.Scanner;
 
-public class Basiccalculator {
+public class BasicCalculator {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        // Taking inputs
-        System.out.print("Enter the first number: ");
-        double number1 = sc.nextDouble();
+        // Take two numbers as input
+        System.out.print("Enter first number: ");
+        double number1 = input.nextDouble();
 
-        System.out.print("Enter the second number: ");
-        double number2 = sc.nextDouble();
+        System.out.print("Enter second number: ");
+        double number2 = input.nextDouble();
 
-        // Performing operations
+        // Perform operations
         double addition = number1 + number2;
         double subtraction = number1 - number2;
         double multiplication = number1 * number2;
-        
-        // Handling division by zero
-        String division;
-        if (number2 != 0) {
-            division = String.valueOf(number1 / number2);
-        } else {
-            division = "Undefined (division by zero not allowed)";
-        }
+        double division = number2 != 0 ? number1 / number2 : Double.NaN; // Avoid division by zero
 
-        // Printing results
-        System.out.println("\nThe addition of " + number1 + " and " + number2 + " is: " + addition);
-        System.out.println("The subtraction of " + number1 + " and " + number2 + " is: " + subtraction);
-        System.out.println("The multiplication of " + number1 + " and " + number2 + " is: " + multiplication);
-        System.out.println("The division of " + number1 + " and " + number2 + " is: " + division);
+        // Output results
+        System.out.println("The addition, subtraction, multiplication and division value of 2 numbers "
+                + number1 + " and " + number2 + " is "
+                + addition + ", " + subtraction + ", " + multiplication + ", " + division);
 
-        sc.close();
+        input.close();
     }
 }

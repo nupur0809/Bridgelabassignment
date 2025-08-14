@@ -1,26 +1,25 @@
 import java.util.Scanner;
 
-public class Trianglearea {
+public class TriangleArea {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        // Taking inputs in cm
-        System.out.print("Enter the base of the triangle (cm): ");
-        double base = sc.nextDouble();
+        // Take base and height input in centimeters
+        System.out.print("Enter base of the triangle (in cm): ");
+        double baseCm = input.nextDouble();
 
-        System.out.print("Enter the height of the triangle (cm): ");
-        double height = sc.nextDouble();
+        System.out.print("Enter height of the triangle (in cm): ");
+        double heightCm = input.nextDouble();
 
-        // Area in square centimeters
-        double areaSqCm = 0.5 * base * height;
+        // Area formula: ½ × base × height
+        double areaCm2 = 0.5 * baseCm * heightCm;
 
-        // Converting to square inches (1 inch = 2.54 cm => 1 sq inch = (2.54)^2 sq cm)
-        double areaSqIn = areaSqCm / (2.54 * 2.54);
+        // Convert area from cm² to inches² (1 inch = 2.54 cm)
+        double areaInch2 = areaCm2 / (2.54 * 2.54);
 
-        // Printing results
-        System.out.println("\nThe Area of the triangle in square centimeters is: " + areaSqCm);
-        System.out.println("The Area of the triangle in square inches is: " + areaSqIn);
+        // Output result
+        System.out.println("The area of the triangle is " + areaCm2 + " cm² and " + areaInch2 + " in²");
 
-        sc.close();
+        input.close();
     }
 }

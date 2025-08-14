@@ -2,18 +2,18 @@ import java.util.Scanner;
 
 public class Squareside {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        // Taking perimeter input
+        // Take perimeter as input
         System.out.print("Enter the perimeter of the square: ");
-        double perimeter = sc.nextDouble();
+        double perimeter = input.nextDouble();
 
-        // Calculating side (Perimeter = 4 × side)
+        // Side of square = perimeter / 4
         double side = perimeter / 4;
 
-        // Printing result
+        // Output result
         System.out.println("The length of the side is " + side + " whose perimeter is " + perimeter);
 
-        sc.close();
+        input.close();
     }
 }
